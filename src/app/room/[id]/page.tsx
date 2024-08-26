@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import AddDataForm from "~/app/_components/adddata";
 import SaveData, { listType } from "~/app/_components/savedata";
 
-function page({ params }: { params: { id: string } }) {
+function Page({ params }: { params: { id: string } }) {
   const [data, setData] = useState<listType[]>([]);
   useEffect(() => {
     const rawData = localStorage.getItem(params.id);
@@ -24,4 +24,4 @@ function page({ params }: { params: { id: string } }) {
   );
 }
 
-export default page;
+export default Page;

@@ -4,8 +4,6 @@ import { api, HydrateClient } from "~/trpc/server";
 import NewRoomForm from "./_components/newroom-form";
 
 export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
-
   return (
     <HydrateClient>
       <main className="container flex h-screen flex-col items-center justify-center">

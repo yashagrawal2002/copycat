@@ -51,10 +51,9 @@ function SaveData({
               <Button
                 //variant="outline"
                 size="icon"
-                onClick={() => {
-                  navigator.clipboard
-                    .writeText(text.text)
-                    .then(() => toast("Text copied to clipboard!"));
+                onClick={async () => {
+                  await navigator.clipboard.writeText(text.text);
+                  toast("Text copied to clipboard!");
                 }}
               >
                 {/* <Copy className="h-4 w-4" /> */}
